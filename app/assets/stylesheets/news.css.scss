@@ -1,0 +1,160 @@
+// Place all the styles related to the News controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#show_new{
+	float: left;
+	width: 680px;
+	background-color: #1f1e1e;
+	position: relative;
+	top:80px;
+	height: 313px;/*/mientras!*/
+}
+#show_new h1{
+	color: #4c4c4c;
+	padding-left:20px;
+	font-size: 45px;
+}
+#show_new h2{
+	color: #4c4c4c;
+	padding-left:20px;
+	font-size: 35px;
+}
+#show_new img{
+	margin-left: 20px;
+}
+#show_new p{
+	color: #cecece;
+	font-size: 14px;
+	padding-left: 20px;
+}
+#show_new a{
+	color: #777777;
+	float: right;
+	padding-right: 30px;
+	margin-bottom: 20px;
+}
+#all_news{
+	background-color: #2b2b2b;
+	width: 340px;
+	float: left;
+	position: relative;
+	top:80px;
+}
+#all_news img{
+	color: #777777;
+	padding-left: 20px;
+	margin-bottom: 20px;
+
+}
+#all_news h1{
+	color: #121212;
+	font-size: 25px;
+	padding-left: 20px;
+}
+#all_news .container_texts{
+ color: #707070;
+ position: relative;
+ left: 20px;
+ width: 310px;
+ font-size: 14px;
+ margin-bottom: 20px;
+}
+.costos{
+	width: 100%;
+	background-color: #1c1c1c;
+	margin-top: 150px;
+}
+.costos h1{
+	color: #303030;
+	font-size: 50px;
+	padding: 20px;
+}
+.costos p{
+	color:#686868;
+	font-size: 14px;
+	margin-left: 20px;
+	padding-bottom:  20px;
+	margin-right: 20px;
+}
+#inscription{
+	width: 100%;
+	background-color: #1c1c1c;
+	margin-top: 150px;
+}
+#inscription h1{
+	color: #303030;
+	font-size: 70px;
+	padding: 20px;
+}
+#inscription p{
+	color:#686868;
+	font-size: 14px;
+	margin-left: 20px;
+	padding-bottom:  20px;
+	margin-right: 20px;
+}
+#many{
+	width: 100%;
+	background-color: #1c1c1c;
+	margin-top: 150px;
+}
+.many{
+	position: relative;
+}
+.many h1{
+	color: #8c8c8c;
+	font-size: 70px;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.many h3{
+	color: #4f4848;
+	font-size: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.many p{
+	color:#8e8e8e;
+	font-size: 14px;
+	margin-left: 20px;
+	padding-bottom:  20px;
+	margin-right: 20px;
+}
+#impactprueba{
+	width: 100%;
+	background-color: #1c1c1c;
+	margin-top: 150px;
+}
+.impactprueba{
+	position: absolute;
+	background-color: #1c1c1c;
+	width: 100%;
+}
+.imp_prueba{
+	width: 50%;
+	float: left;
+}
+.imp_prueba h1{
+	color: #8c8c8c;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.imp_prueba h3{
+	color: #4f4848;
+	font-size: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.imp_prueba p{
+	color:#8e8e8e;
+	font-size: 14px;
+	margin-left: 20px;
+	padding-bottom:  20px;
+	margin-right: 20px;
+}
+
+
+

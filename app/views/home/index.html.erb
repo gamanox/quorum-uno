@@ -1,0 +1,107 @@
+<div id="white_space">
+	 <h1 id="connecting">CONECTANDO</h1> 
+</div>
+<div id="contents">
+	<% @juries.each do |content| %>
+		<section class="contents" id="<%= content.title %>">
+			<img src="<%= content.picture %>" alt="" id="img_motion_graphics" class="img_content">
+			<div id="line_color_motion_graphics" class="line_content_div"></div>
+			<div class="container_texts">
+				<article class="content_article">
+					 <h1 id="h1_motion_graphics"> <%= content.title %></h1> 
+					 <h2><%= content.title %></h2> 
+					<p>
+						<%= content.desc %>
+					</p>
+				</article>
+				<div class="arrow_read_more">
+					<%= link_to "+ VER MÁS", { :action=>'content', :controller => 'home', :id => content.id }, :class=> "read_more_content link" %></div>
+			</div>
+		</section>
+		<% end %>
+			<div id="arrow_prev_content" class="asset"></div>
+			<div id="arrow_next_content" class="asset"></div>
+</div>
+<div id="sections">
+	<ul id="ul_section">
+		<li class="section" id="event_section">
+			<a href="/events/home" class="section_link">
+				<img src="/assets/event.jpg" alt="" id="event" class="img_section">
+				<div class="seg"></div>EVENTO</a>
+		</li>
+		<li class="section" id="manifest_section">
+			<a href="/homes/manifest" class="section_link">
+				<div class="img_section" id="manifest_text">
+					 <h3 id="why_creemos">CREEMOS</h3> 
+					 <h3 id="why_enel">EN EL</h3> 
+					 <h3 id="why_poder">PODER</h3>
+					 <h3 id="why_dela">DE LA</h3> 
+					 <h3 id="why_colaboracion">COLABORACIÓN</h3> 
+				</div>MANIFIESTO</a>
+		</li>
+		<li class="section" id="why_section">
+			<a href="" class="section_link">
+				<div class="img_section" id="why_image">
+					<img src="/assets/why.png" alt="" id="why">
+				</div>
+				<%= link_to "PQ13 AÑO UNO",{ :controller=>'homes', :action => 'Biography'}, :class=> 'link' %></a>
+		</li>
+		<li class="section" id="impact_section">
+			<a href="/homes/impact" class="section_link">
+				<img src="/assets/impact.jpg" alt="" id="impact" class="img_section">
+				<div class="segimp"></div>IMPACTO</a>
+		</li>
+	</ul>
+</div>
+<div id="agend" class="block_footer">
+	 <h1 class="head_h1_foter">AGENDA</h1> 
+	<% @events.each do |evento| %>
+		<section id="bienal_section" class="agend_section">
+			<img src="<%= evento.picture %>" alt="" class="img_agend" id="bienal_section">
+			<div class="texts_agend">
+				 <h1><%= evento.title %></h1> 
+				<p>
+					<%= evento.desc %>
+				</p>
+				<a href="" class="">
+					<%= evento.url%>
+				</a>
+			</div>
+		</section>
+		<% end %>
+</div>
+<div id="social_networks">
+	 <h1 class="head_h1_foter">SOCIAL</h1> 
+	<div id="container_networks">
+		<div id="twitter_">
+			<div id="tw_quorum" class="asset"></div>
+			<a href="http://twitter.com/PremioQuorum" id="twitter_quorum">TWITTER</a>
+		</div>
+		<div id="facebook_">
+			<div id="fb_quorum" class="asset"></div>
+			<a href="http://bpb.opendns.com/a/www.facebook.com/PremioQuorum" id="facebook_quorum">FACEBOOK</a>
+		</div>
+		<div id="newsletter">
+			 <h1 id="subscribe">SUSCRÍBETE <br>Y RECIBE NOTICIAS</h1> 
+			<input value="correo electrónico" data="correo electrónico" type="text" id="email_newsletter">
+			<div id="send_newsletter">
+				<a href="" id="arrow_newsletter" class="asset"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="news" class="block_footer">
+	 <h1 class="head_h1_foter">NOTICIAS</h1> 
+	<% @news.each do |noticia| %>
+		<section id="bienal_section" class="agend_section">
+
+			<%= link_to image_tag(noticia.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'show', :section => 'Noticias'}, :class=> 'link'  %>
+				<div class="texts_agend">
+					 <h1><%= noticia.title %></h1> 
+					<p>
+						<%= noticia.desc %>
+					</p>
+				</div>
+		</section>
+		<% end %>
+</div>

@@ -1,0 +1,551 @@
+@import url("quorum_fonts.css");
+a,a:hover{
+	color:white;
+}
+html,body{
+	background: #000000;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#preloader{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	z-index: 6000;
+	text-align: center;
+}
+#theloader{
+	height: 60px;
+	width: 60px;
+	margin: 0 auto;
+	position: relative;
+}
+#h1_preloader{
+	color:#000000;
+	font-size: 12px;
+	font-family: 'museo_100';
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+#container_layout {
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+	background: #000000;
+	min-height: 100%;
+}
+#container_layout a{
+	position: relative;
+	z-index: 3000;
+}
+#backgrounds{
+	width: 100%;
+	position: relative;
+	z-index: 100;
+	overflow: hidden;
+	height: 0%;
+	opacity: 0;
+	-webkit-transform: rotate(-10deg) scale(1, 1);
+	-moz-transform: rotate(-10deg) scale(1, 1);
+	-o-transform: rotate(-10deg) scale(1, 1);
+	-ms-transform: rotate(-10deg) scale(1, 1);
+	transform: rotate(-10deg) scale(1, 1);
+}
+.bgs {
+	width: 1640px;
+	height: 1580px;
+	position: absolute;
+	overflow: hidden;
+	top: -388px;
+	-webkit-transform: rotate(20deg) scale(1, 1);
+	-moz-transform: rotate(20deg) scale(1, 1);
+	-o-transform: rotate(20deg) scale(1, 1);
+	-ms-transform: rotate(20deg) scale(1, 1);
+	transform: rotate(20deg) scale(1, 1);
+}
+header{
+	height: 135px;
+	margin-top: 32px;
+	position: relative;
+	z-index: 100;
+	text-align: left;
+	z-index: 1000;
+}
+#bg_header{
+	height: 135px;
+	width: 100%;
+	background: #000000;
+	position: absolute;
+	margin-top: 32px;
+	z-index: 100;
+	opacity: 0;
+}
+#bg_cover_header{
+	height: 30px;
+	width: 100%;
+	background: #1e1e1e;
+	position: absolute;
+	margin-top: 74px;
+	z-index: 100;
+	opacity: 0;
+}
+a,a:link,a:visited,a:hover{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+	float: left;
+}
+#uno{ z-index: 100; }
+.asset {
+    background: url(/assets/assets.png) no-repeat;
+}
+#categories li:nth-child(1){
+	margin-left: 210px;
+}
+.wrapper{
+	width: 1020px;
+	margin: 0 auto;
+	z-index: 100;
+	position: relative;
+}
+#logo_quorum_container{
+	width: 180px;
+	margin-top: 30px;
+	margin-left: 70px;
+}
+#logo_text {
+	float: right;
+	top: 35px;
+	position: relative;
+	overflow: hidden;
+	width: 71px;
+	height: 0px;
+	background-position: -0px -0px;
+}
+
+#logo_header {
+	top: 25px;
+	position: relative;
+	opacity: 0;
+}
+#categories {
+	position: relative;
+	bottom: 20px;
+	width: 100%;
+}
+.category{
+	width: 150px;
+	opacity: 0;
+	text-align: center;
+}
+.category a{
+	color: #ffffff;
+	font-family: 'museo_100';
+	font-size: 16px;
+}
+.category a:hover, .active{
+	color: #E53B68!important;
+}
+p{
+	font-family: 'museo_100';
+	font-size: 14px;
+	color: white;
+}
+
+#white_space{
+	height: 400px;
+	width: 100%;
+}
+#connecting {
+	color: #ffffff;
+	font-size: 37px;
+	font-family: 'museo_900';
+	font-weight: normal;
+	top: 210px;
+	position: relative;
+	opacity: 0;
+	margin-left: -20px;
+}
+.container_img_content{
+	position: relative;
+	width: 600px;
+	overflow: hidden;
+	float: left;
+}
+#contents{
+	position: relative;
+	width: 100%;
+	height: 0px;
+	opacity: 0;
+	background: #282828;
+	overflow:hidden;
+}
+#contents section{
+	width: 100%;
+	height: 400px;
+	float: left;
+	position: relative;
+}
+.img_content{
+	float: left;
+}
+.contents{
+	display: none;
+}
+.contents:nth-child(1){
+	margin-top: 0px;
+	display: block;
+	left: 0px;
+}
+.line_content_div {
+	width: 12px;
+	height: 400px;
+	float: left;
+	position: relative;
+	background: #E53B68;
+}
+.content_article{
+	top: -20px;
+	position: absolute;
+}
+
+.container_img_section {
+	width: 600px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
+#line_content_1{
+	background: #e53a67;
+}
+#line_content_2{
+	background: #C9C96B;
+}
+
+.container_texts article{
+	width: 350px;
+	float: right;
+	right: 30px;
+	position: relative;
+	top: 20px;
+}
+.container_texts article h1{
+	font-family: 'museo_700';
+	text-transform: uppercase;
+	color: #E53B68;
+}
+#h1_section_1{
+	color: #e53a67;
+}
+#h1_section_2{
+	color: #C9C96B;
+}
+.container_texts article h2{
+	font-family: 'museo_300';
+	color: white;
+	position: relative;
+	top: 40px;
+	text-transform: uppercase;
+}
+.container_texts article p {
+	font-family: 'museo_300';
+	font-size: 15px;
+	line-height: 21px;
+	position: relative;
+	top: 50px;
+	height: 167px;
+	overflow: hidden;
+}
+.container_texts{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.arrow_read_more {
+	background: url(/assets/pink.png);
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 16px;
+	position: absolute;
+	right: 213px;
+	bottom: 40px;
+}
+.read_more_content{
+	position: relative;
+	float: left;
+	margin-top: 1px;
+	margin-left: 31px;
+	font-family: 'museo_300';
+	font-size: 12px;
+	color: #E53B68;
+	font-weight: normal;
+}
+#arrow_prev_content{
+	position: absolute;
+	right: 100px;
+	bottom: 30px;
+	width: 23px;
+	height: 16px;
+	background-position: -114px -5px;
+	cursor: pointer;
+}
+#arrow_next_content{
+	position: absolute;
+	right: 50px;
+	bottom: 30px;
+	width: 23px;
+	height: 16px;
+	background-position: -115px -31px;
+	cursor: pointer;
+}
+#arrow_prev_content:hover{
+	right: 102px;
+}
+#arrow_next_content:hover{
+	right: 48px;
+}
+#sections{
+	position: relative;
+	width: 100%;
+	height: 280px;
+	background: #282828;
+	margin-top: 60px;
+}
+.section{
+	position: relative;
+	float: left;
+	width: 255px;
+	text-align: center;
+}
+.section_link {
+	position: relative;
+	font-family: 'museo_300';
+	font-size: 17px;
+	color: white;
+	font-weight: normal;
+}
+#ul_section{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.img_section {
+	margin: 38px 38px 20px 38px;
+	overflow: hidden;
+	width: 179px;
+	height: 176px;
+	cursor: pointer;
+}
+#manifest_text{
+	text-align: center;
+	background: #70bde7;
+}
+#manifest_text h3{
+	color: white;
+}
+#why_image{
+	background: #640e35;	
+}
+#why {
+	position: relative;
+	top: -50px;
+	left: -50px;
+}
+#why_creemos,#why_poder,#why_colaboracion{ font-family: 'museo_900'; }
+#why_enel,#why_dela{ font-family: 'museo_300'; }
+#why_creemos{ margin-top: 24px; }
+.block_footer{
+	float: left;
+	width: 360px;
+	background: #282828;
+	margin-top: 50px;
+	height: 700px;
+	overflow: hidden;
+}
+#social_networks{
+	float: left;
+	width: 300px;
+	overflow: hidden;
+	margin-top: 50px;
+	height: 700px;
+}
+#social_networks,.block_footer,#sections{
+	opacity: 0;
+}
+.img_agend {
+	width: 300px;
+	margin: 30px;
+}
+.texts_agend {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.texts_agend a{
+	display: none;
+}
+.texts_agend h1{
+	font-family: 'museo_500';
+	font-weight: normal;
+	font-size: 15px;
+	color: white;
+}
+.texts_agend p {
+	margin-top: 17px;
+	line-height: 18px;
+	height: 92px;
+	overflow: hidden;
+}
+.head_h1_foter {
+	color: #8F8F8F;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 32px;
+	font-family: 'museo_300';
+}
+#container_networks{
+	margin: 38px;
+}
+#send_newsletter {
+	background: #292929;
+	position: relative;
+	width: 30px;
+	height: 25px;
+	overflow: hidden;
+	left: 195px;
+	top: 10px;
+}
+#send_newsletter a{
+	position: absolute;
+}
+#arrow_newsletter {
+	width: 30px;
+	height: 27px;
+	background-position: -111px -52px;
+	position: absolute;
+}
+#facebook_, #twitter_{
+	width: 100%;
+	height: 55px;
+}
+#fb_quorum {
+    width: 28px;
+    height: 28px;
+    background-position: -77px -5px;
+    float: left;
+}
+#tw_quorum {
+    width: 27px;
+    height: 22px;
+    float: left;
+    background-position: -78px -42px;
+}
+#subscribe{
+	font-family: 'museo_500';
+	color: white;
+	font-size: 15px;
+}
+#twitter_quorum, #facebook_quorum{
+	font-family: 'museo_500';
+	font-size: 15px;
+	color: white;
+	margin-left: 18px;
+	top: 3px;
+	position: relative;
+}
+#newsletter{
+	width: 100%;
+	margin-top: 30px;
+}
+#main_container{
+	text-align: left;
+	margin-top: 50px;
+}
+#email_newsletter{
+	width: 185px;
+	outline: none;
+	border: none;
+	margin-top: 10px;
+	font-family: 'museo_300';
+	font-size: 14px;
+	height: 15px;
+	overflow: hidden;
+	padding: 5px;
+	float: left;
+	position: absolute;
+}
+.seg{
+	background-image: url(/assets/event_sprite.jpg);
+	background-position: 0 -176px;
+	width: 179px;
+	height: 176px;
+	position: absolute;
+	top: -181px;
+	left: 38px;
+	opacity: 0;
+}
+.segimp{
+	background-image: url(/assets/impact_sprite.jpg);
+	width: 179px;
+	height: 176px;
+	position: absolute;
+	top: -181px;
+	left: 38px;
+	opacity: 0;
+}
+#new_user{
+	position: absolute;
+	z-index: 3000;
+	width: 300;
+	margin: 0 auto;
+}
+#new_user {
+	position: relative;
+	z-index: 3000;
+	width: 300px;
+	margin: 0 auto;
+}
+#user_email, #user_password, #user_password_confirmation{
+	width: 300px;
+	border: none;
+	text-align: center;
+	background: rgba(19, 170, 110, 0.6);
+	height: 25px;
+	color: white;
+	border-radius: 1px;
+	margin: 5px;
+	border: none;
+}
+label{
+	color: white;
+	font-family: 'museo_300';
+}
+.display_all{
+	float: left;
+}
+._showline {
+	width: 8px;
+	background: #1e1e1e;
+	float: left;
+	opacity: 0;
+}
+#nav_right {
+	width: 100px;
+	opacity: 0;
+	background: #292929;
+	padding: 30px;
+	height: 0;
+}
+#show_ {
+	width: 640px;
+	background: #000000;
+	padding: 30px;
+	height: 0px;
+	opacity: 0;
+}

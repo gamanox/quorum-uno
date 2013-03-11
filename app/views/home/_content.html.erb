@@ -1,0 +1,47 @@
+<div id="show_" class="display_all">
+<% @content.each do |c| %>
+	<div class="contenido">
+	<h1 class="category_title_show"><%= c.title %></h1>		
+	<p class="category_body_show"><%= c.desc %></p>	
+	<%= link_to c.url, :target => '_blank'%>
+	</div>
+<% end %>
+</div>
+<div class="_showline"></div>
+
+<div id="nav_right" class="display_all">
+
+	<% @news.each do |n| %>
+
+
+		<div class="subcategory_display">
+			<h1 class="category_title_nav">
+				<%= n.title %>
+			</h1>
+			<p class="category_body_nav">
+				<%= n.desc.slice(0..10) + " - - -"%>
+			</p>
+		<%= image_tag n.picture%>
+		<%= link_to n.url, :target => '_blank'%>
+		</div>
+
+	<% end %>
+
+
+	<% @events.each do |e| %>
+
+
+		<div class="subcategory_display">
+			<h1 class="category_title_nav">
+				<%= e.title %>
+			</h1>
+			<p class="category_body_nav">
+				<%= e.desc.slice(0..10) + " - - -"%>
+			</p>
+		<%= image_tag e.picture%>
+		<%= link_to e.url, :target => '_blank'%>
+		</div>
+
+	<% end %>
+</div>
+</div>
