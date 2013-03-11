@@ -332,6 +332,10 @@ p{
 	font-size: 17px;
 	color: white;
 	font-weight: normal;
+	cursor: pointer;
+}
+.section_link a:hover{
+	color: #E53B68!important;
 }
 #ul_section{
 	position: relative;
@@ -482,24 +486,26 @@ p{
 	float: left;
 	position: absolute;
 }
-.seg{
+.seg {
 	background-image: url(/assets/event_sprite.jpg);
 	background-position: 0 -176px;
 	width: 179px;
 	height: 176px;
 	position: absolute;
-	top: -181px;
+	top: 38px;
 	left: 38px;
 	opacity: 0;
+	z-index: 10000;
 }
-.segimp{
+.segimp {
 	background-image: url(/assets/impact_sprite.jpg);
 	width: 179px;
 	height: 176px;
 	position: absolute;
-	top: -181px;
+	top: 38px;
 	left: 38px;
 	opacity: 0;
+	z-index: 10000;
 }
 #new_user{
 	position: absolute;
