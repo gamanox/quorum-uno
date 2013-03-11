@@ -286,7 +286,7 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
     });
 
 }
-$("#white_space").on("mouseover",function(){
+/*$("#white_space").on("mouseover",function(){
     za=0;
     $(".blue").each(function(){
      za=za+500;   
@@ -300,7 +300,7 @@ $("#white_space").on("mouseover",function(){
              za=za+500;   
              $(this).delay(za).stop().animate({'stroke':'blue'});
         });
-    });
+    });*/
 
     $('a.link').address(function(event) {
         $('a').removeClass("active");
