@@ -15,6 +15,24 @@
 //= require_tree .
 $(function() {
 
+    $(window).resize(function () {
+
+            sizes();
+
+    });
+    function sizes() { $(".bgs").centers(); }
+
+    $.fn.centers = function () {
+        var w = $(window).width(),
+            wl = $(this).width(),
+            resw = parseInt((w - wl) / 2),
+            $this = $(this);
+        return this.each(function () {
+            $this.css({ left: resw });
+        });
+    }
+    sizes();
+
     $(window).load(function(){
         $("body").animate({scrollTop:0},300);
         setTimeout(function(){
@@ -106,10 +124,12 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
 
     function loader_uno(){
         setTimeout(function(){ plax_ready(); interactions_ready(); },100);
+        $("#uno").load('assets/bgs/uno.html', function(){
             $(this).animate({rotate:'0deg'},5000,'linear');
             for (var i = 0; i < letters.length; i++) {
                 $("."+letters[i]).animateitems(900,colorletters[i]);
             };
+        });
     }
 
     function load_bgs(){
@@ -266,7 +286,7 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
     });
 
 }
-/*$("#white_space").on("mouseover",function(){
+$("#white_space").on("mouseover",function(){
     za=0;
     $(".blue").each(function(){
      za=za+500;   
@@ -274,19 +294,19 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
     })
 
 })
-	$("#white_space").on("mouseout",function(){
+    $("#white_space").on("mouseout",function(){
     za=0;
-	    $(".blue").each(function(){
-		     za=za+500;   
-		     $(this).delay(za).stop().animate({'stroke':'blue'});
-		});
-	});
+        $(".blue").each(function(){
+             za=za+500;   
+             $(this).delay(za).stop().animate({'stroke':'blue'});
+        });
+    });
 
-	$('a.link').address(function(event) {
-		$('a').removeClass("active");
-		$(this).addClass("active");
-		return $(this).attr('href');
-	});*/
+    $('a.link').address(function(event) {
+        $('a').removeClass("active");
+        $(this).addClass("active");
+        return $(this).attr('href');
+    });
 
     
 });
