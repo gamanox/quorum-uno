@@ -15,7 +15,8 @@
 					</p>
 				</article>
 				<div class="arrow_read_more">
-					<%= link_to "+ VER MÁS", { :action=>'content', :controller => 'home', :id => content.id }, :class=> "read_more_content link" %></div>
+					<%= link_to "+ VER MÁS", { :action=>'content', :controller => 'home', :id => content.id }, :class => "read_more_content link", :remote => true %>
+				</div>
 			</div>
 		</section>
 		<% end %>
@@ -25,31 +26,38 @@
 <div id="sections">
 	<ul id="ul_section">
 		<li class="section" id="event_section">
-			<a href="/events/home" class="section_link">
+			<div class="section_link">
 				<img src="/assets/event.jpg" alt="" id="event" class="img_section">
-				<div class="seg"></div>EVENTO</a>
+				<div class="seg"></div>
+				<%= link_to "EVENTO", { :action=>'content', :controller => 'home', :id => 10}, :remote => true %>
+			</div>
 		</li>
 		<li class="section" id="manifest_section">
-			<a href="/homes/manifest" class="section_link">
+			<div class="section_link">
 				<div class="img_section" id="manifest_text">
 					 <h3 id="why_creemos">CREEMOS</h3> 
 					 <h3 id="why_enel">EN EL</h3> 
 					 <h3 id="why_poder">PODER</h3>
 					 <h3 id="why_dela">DE LA</h3> 
 					 <h3 id="why_colaboracion">COLABORACIÓN</h3> 
-				</div>MANIFIESTO</a>
+				</div>
+				<%= link_to "MANIFIESTO", { :action=>'content', :controller => 'home', :id => 3 }, :remote => true %>
+			</div>
 		</li>
 		<li class="section" id="why_section">
-			<a href="" class="section_link">
+			<div class="section_link">
 				<div class="img_section" id="why_image">
 					<img src="/assets/why.png" alt="" id="why">
 				</div>
-				<%= link_to "PQ13 AÑO UNO",{ :controller=>'homes', :action => 'Biography'}, :class=> 'link' %></a>
+				<%= link_to "PQ13 AÑO UNO", { :action=>'content', :controller => 'home', :id => 9 }, :remote => true %>
+			</div>
 		</li>
 		<li class="section" id="impact_section">
-			<a href="/homes/impact" class="section_link">
+			<div class="section_link">
 				<img src="/assets/impact.jpg" alt="" id="impact" class="img_section">
-				<div class="segimp"></div>IMPACTO</a>
+				<div class="segimp"></div>
+				<%= link_to "IMPACTO", { :action=>'content', :controller => 'home', :id => 8 }, :remote => true %>
+			</div>
 		</li>
 	</ul>
 </div>
@@ -57,16 +65,14 @@
 	 <h1 class="head_h1_foter">AGENDA</h1> 
 	<% @events.each do |evento| %>
 		<section id="bienal_section" class="agend_section">
-			<img src="<%= evento.picture %>" alt="" class="img_agend" id="bienal_section">
-			<div class="texts_agend">
-				 <h1><%= evento.title %></h1> 
-				<p>
-					<%= evento.desc %>
-				</p>
-				<a href="" class="">
-					<%= evento.url%>
-				</a>
-			</div>
+
+			<%= link_to image_tag(evento.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => evento.id}, :class=> 'link', :remote => true  %>
+				<div class="texts_agend">
+					 <h1><%= evento.title %></h1> 
+					<p>
+						<%= evento.desc %>
+					</p>
+				</div>
 		</section>
 		<% end %>
 </div>
@@ -95,7 +101,7 @@
 	<% @news.each do |noticia| %>
 		<section id="bienal_section" class="agend_section">
 
-			<%= link_to image_tag(noticia.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'show', :section => 'Noticias'}, :class=> 'link'  %>
+			<%= link_to image_tag(noticia.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => noticia.id}, :class=> 'link', :remote => true  %>
 				<div class="texts_agend">
 					 <h1><%= noticia.title %></h1> 
 					<p>
