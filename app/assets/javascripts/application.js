@@ -123,7 +123,7 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
     }
 
     function loader_uno(){
-        setTimeout(function(){ plax_ready(); interactions_ready(); },100);
+        setTimeout(function(){ plax_ready(); interactions_ready(); },10000);
         $("#uno").load('assets/bgs/uno.html', function(){
             $(this).animate({rotate:'0deg'},5000,'linear');
             for (var i = 0; i < letters.length; i++) {

@@ -194,6 +194,8 @@ p{
 	position: relative;
 }
 .img_content{
+	height: 400px;
+	width: 600px;
 	float: left;
 }
 .contents{
