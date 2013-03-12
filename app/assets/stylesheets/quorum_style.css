@@ -596,3 +596,6 @@ label{
 #news_{
 	opacity: 0;
 }
+.description_note img{
+	display: none;
+}

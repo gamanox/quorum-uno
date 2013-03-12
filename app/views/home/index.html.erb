@@ -61,7 +61,7 @@
 			<%= link_to image_tag(evento.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => 2, :article => evento.id }, :class=> 'link', :remote => true  %>
 				<div class="texts_agend">
 					<h1><%= evento.title %></h1>
-					<p><%= evento.desc %></p>
+					<p class="description_note"><%= evento.desc.html_safe %></p>
 				</div>
 		</section>
 		<% end %>
@@ -93,7 +93,7 @@
 			<%= link_to image_tag(noticia.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => 1, :article => noticia.id}, :class=> 'link', :remote => true  %>
 				<div class="texts_agend">
 					<h1><%= noticia.title %></h1>
-					<p><%= noticia.desc %></p>
+					<p class="description_note"><%= noticia.desc.html_safe %></p>
 				</div>
 		</section>
 		<% end %>
