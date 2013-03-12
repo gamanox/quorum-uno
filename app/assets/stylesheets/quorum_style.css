@@ -3,7 +3,7 @@ a,a:hover{
 	color:white;
 }
 html,body{
-	background: #000000;
+	background: rgb(19, 19, 19);
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -567,6 +567,9 @@ label{
 	text-align: right;
 	right: 0;
 	color: rgb(255, 255, 255);
+}
+.link_feed:hover{
+	color: rgb(251, 36, 103)!important;
 }
 #line_an {
 	height: 2px;

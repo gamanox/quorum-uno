@@ -62,13 +62,16 @@
 	margin: 0;
 	line-height: 33px;
 }
-.category_body_show{
+.category_body_show {
 	color: white;
 	font-family: 'museo_100';
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: normal;
-	letter-spacing: 2px;
 	clear: both;
+	line-height: 24px;
+	margin-top: 26px;
+	width: 600px;
+	margin-bottom: 10px;
 }
 .category_body_nav {
 	color: white;
@@ -92,4 +95,16 @@
 	color: white;
 	font-size: 25px;
 	margin-top: -10px
+}
+.h1_content {
+	font-family: 'museo_300';
+	color: white;
+	font-size: 32px;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+}
+.contenido img{
+	max-width: 600px;
 }

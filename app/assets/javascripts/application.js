@@ -284,7 +284,6 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
     }, function(){
          $('.seg').stop().animate({opacity:0},1000, 'easeInOutQuart');
     });
-
 }
 /*$("#white_space").on("mouseover",function(){
     za=0;
@@ -308,5 +307,9 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
         return $(this).attr('href');
     });
 
-    
+    $(".link").on('click',function(){
+        $("body").animate({scrollTop:0},1000,'easeInOutQuart');
+        $("#connecting").animate({opacity:0,color:'#000000',top:280},600,'easeOutQuart');
+        $("#contents").animate({opacity:0,backgroundColor:'#000000',top:50},600,'easeOutQuart');
+    });
 });

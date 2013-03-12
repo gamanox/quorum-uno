@@ -1,8 +1,10 @@
 <div id="show_" class="display_all">
 <% @content.each do |c| %>
 	<div class="contenido">
-	<p class="category_body_show"><%= c.desc %></p>	
-	<%= link_to c.url,{:target => '_blank', :class=> "link_feed"}, :class=> "link_feed" %>
+		<h1>c.title</h1>
+		<img src="<%= c.picture  %>" alt="">
+		<p class="category_body_show"><%= h c.desc. html_safe %></p>	
+		<%= link_to c.url,{:target => '_blank', :class=> "link_feed"}, :class=> "link_feed" %>
 	</div>
 <% end %>
 </div>
