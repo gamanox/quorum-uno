@@ -10,12 +10,12 @@
 				<article class="content_article">
 					 <h1 id="h1_motion_graphics"> <%= content.title %></h1> 
 					 <h2><%= content.title %></h2> 
-					<p>
-						<%= content.desc %>
+					<p class="article_paragraph">
+						<%= content.desc.html_safe %>
 					</p>
 				</article>
 				<div class="arrow_read_more">
-					<%= link_to "+ VER MÁS", { :action=>'content', :controller => 'home', :id => 5 }, :class => "read_more_content link", :remote => true %>
+					<%= link_to "+ VER MÁS", { :action=>'content', :controller => 'home', :id => 5, :article=> content.id }, :class => "read_more_content link", :remote => true %>
 				</div>
 			</div>
 		</section>
@@ -54,16 +54,14 @@
 	</ul>
 </div>
 <div id="agend" class="block_footer">
-	 <h1 class="head_h1_foter">AGENDA</h1> 
+	<%= link_to "AGENDA", { :action=>'content', :controller => 'home', :id => 2 }, :class => "head_h1_foter link", :remote => true %>
 	<% @events.each do |evento| %>
 		<section id="bienal_section" class="agend_section">
 
-			<%= link_to image_tag(evento.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => evento.id}, :class=> 'link', :remote => true  %>
+			<%= link_to image_tag(evento.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => 2, :article => evento.id }, :class=> 'link', :remote => true  %>
 				<div class="texts_agend">
-					 <h1><%= evento.title %></h1>
-					<p>
-						<%= evento.desc %>
-					</p>
+					<h1><%= evento.title %></h1>
+					<p><%= evento.desc %></p>
 				</div>
 		</section>
 		<% end %>
@@ -89,16 +87,14 @@
 	</div>
 </div>
 <div id="news" class="block_footer">
-	 <h1 class="head_h1_foter">NOTICIAS</h1> 
+	<%= link_to "NOTICIAS", { :action=>'content', :controller => 'home', :id => 1 }, :class => "head_h1_foter link", :remote => true %>
 	<% @news.each do |noticia| %>
 		<section id="bienal_section" class="agend_section">
 
-			<%= link_to image_tag(noticia.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => noticia.id}, :class=> 'link', :remote => true  %>
+			<%= link_to image_tag(noticia.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => 1, :article => noticia.id}, :class=> 'link', :remote => true  %>
 				<div class="texts_agend">
-					 <h1><%= noticia.title %></h1> 
-					<p>
-						<%= noticia.desc %>
-					</p>
+					<h1><%= noticia.title %></h1>
+					<p><%= noticia.desc %></p>
 				</div>
 		</section>
 		<% end %>
