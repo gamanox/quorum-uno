@@ -557,3 +557,22 @@ label{
 	height: 0px;
 	opacity: 0;
 }
+.img_feed {
+	width: 252px;
+	margin-top: 16px;
+}
+.link_feed {
+	font-family: 'museo_300';
+	font-size: 12px;
+	text-align: right;
+	right: 0;
+	color: rgb(255, 255, 255);
+}
+#line_an {
+	height: 2px;
+	width: 100%;
+	background: rgb(133, 133, 133);
+	position: relative;
+	float: left;
+	margin-bottom: 20px;
+}

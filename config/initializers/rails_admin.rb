@@ -3,6 +3,18 @@
 
 RailsAdmin.config do |config|
 
+  config.model Content do
+    edit do
+      field :url
+      field :category
+      field :picture
+      field :title
+      field :desc do
+        bootstrap_wysihtml5 true
+      end
+    end
+  end
+
 
   ################  Global configuration  ################
 
@@ -49,6 +61,5 @@ RailsAdmin.config do |config|
 
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
-
 
 end

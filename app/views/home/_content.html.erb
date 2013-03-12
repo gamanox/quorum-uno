@@ -1,47 +1,32 @@
 <div id="show_" class="display_all">
 <% @content.each do |c| %>
 	<div class="contenido">
-	<h1 class="category_title_show"><%= c.title %></h1>		
 	<p class="category_body_show"><%= c.desc %></p>	
-	<%= link_to c.url, :target => '_blank'%>
+	<%= link_to c.url,{:target => '_blank', :class=> "link_feed"}, :class=> "link_feed" %>
 	</div>
 <% end %>
 </div>
+
 <div class="_showline"></div>
 
 <div id="nav_right" class="display_all">
-
+	<h1 class="agend_">AGENDA</h1>
 	<% @news.each do |n| %>
-
-
 		<div class="subcategory_display">
-			<h1 class="category_title_nav">
-				<%= n.title %>
-			</h1>
-			<p class="category_body_nav">
-				<%= n.desc.slice(0..10) + " - - -"%>
-			</p>
-		<%= image_tag n.picture%>
-		<%= link_to n.url, :target => '_blank'%>
+			<%= image_tag n.picture, :class=>'img_feed' %>
+			<p class="category_body_nav"><%= n.desc.slice(0..200) + "..."%></p>
+		<%= link_to n.url,{:target => '_blank', :class=> "link_feed"}, :class=> "link_feed" %>
 		</div>
-
 	<% end %>
-
-
+	<div id="line_an"></div>
+	<h1 class="agend_">NOTICIAS</h1>
 	<% @events.each do |e| %>
-
-
 		<div class="subcategory_display">
-			<h1 class="category_title_nav">
-				<%= e.title %>
-			</h1>
+			<%= image_tag e.picture, :class=>'img_feed' %>
 			<p class="category_body_nav">
-				<%= e.desc.slice(0..10) + " - - -"%>
+				<%= e.desc.slice(0..200) + "..."%>
 			</p>
-		<%= image_tag e.picture%>
-		<%= link_to e.url, :target => '_blank'%>
+		<%= link_to e.url,{:target => '_blank', :class=> "link_feed"}, :class=> "link_feed" %>
 		</div>
-
 	<% end %>
-</div>
 </div>
