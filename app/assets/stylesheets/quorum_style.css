@@ -575,8 +575,15 @@ label{
 	right: 0;
 	color: rgb(255, 255, 255);
 }
-.link_feed:hover{
+.link_feed:hover, .readmore_feed:hover{
 	color: rgb(251, 36, 103)!important;
+}
+.readmore_feed {
+	font-family: 'museo_300';
+	font-size: 10px;
+	text-align: right;
+	right: 0;
+	color: rgb(255, 255, 255);
 }
 #line_an {
 	height: 2px;

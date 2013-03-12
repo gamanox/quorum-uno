@@ -12,23 +12,19 @@
 
 <div id="nav_right" class="display_all">
 	<%= link_to "AGENDA", { :action=>'content', :controller => 'home', :id => 2 }, :class => "agend_ link", :remote => true %>
-	<% @news.each do |n| %>
+	<% @events.each do |n| %>
 		<div class="subcategory_display">
 			<%= link_to image_tag(n.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 2, :article => n.id }, :class=> 'link', :remote => true  %>
-
-			<p class="category_body_nav"><%= n.desc.slice(0..200) + "..."%></p>
-		<a href="<%= n.url%>" target="_blank" class="link_feed"><%= n.url%></a>
+			<p class="category_body_nav"><%= n.desc.slice(0..200) + "...  "%></p>
+			<%= link_to "+ LEER MÁS", { :action=>'content', :controller => 'home', :id => 2, :article => n.id }, :class => "readmore_feed link", :remote => true %>
 		</div>
 	<% end %>
 	<div id="line_an"></div>
 	<%= link_to "NOTICIAS", { :action=>'content', :controller => 'home', :id => 1 }, :class => "agend_ link", :ID => "news_", :remote => true %>
-	<% @events.each do |e| %>
+	<% @news.each do |e| %>
 		<div class="subcategory_display">
-			<%= link_to image_tag(e.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 2, :article => e.id }, :class=> 'link', :remote => true  %>
-
-			<p class="category_body_nav">
-				<%= e.desc.slice(0..200) + "..."%>
-			</p>
+			<%= link_to image_tag(e.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 1, :article => e.id }, :class=> 'link', :remote => true  %>
+			<p class="category_body_nav"><%= e.desc.slice(0..200) + "... "%><%= link_to "+ LEER MÁS", { :action=>'content', :controller => 'home', :id => 1, :article => e.id }, :class => "readmore_feed link", :remote => true %></p>
 		<a href="<%= e.url%>" target="_blank" class="link_feed"><%= e.url%></a>
 		</div>
 	<% end %>

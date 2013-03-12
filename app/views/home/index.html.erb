@@ -90,7 +90,6 @@
 	<%= link_to "NOTICIAS", { :action=>'content', :controller => 'home', :id => 1 }, :class => "head_h1_foter link", :remote => true %>
 	<% @news.each do |noticia| %>
 		<section id="bienal_section" class="agend_section">
-
 			<%= link_to image_tag(noticia.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => 1, :article => noticia.id}, :class=> 'link', :remote => true  %>
 				<div class="texts_agend">
 					<h1><%= noticia.title %></h1>
