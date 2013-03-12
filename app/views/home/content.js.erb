@@ -29,13 +29,10 @@ $('#main_container').fadeOut(300,function(){
 		$("#nav_right").css({height:majior}).delay(100).animate({width:252,opacity:1},1600,'easeInOutQuart');
 		$(".subcategory_display").delay(1100).each(function(){
 			$(this).delay(za).animate({opacity:1},600,'easeInOutQuart');
-			if(za==900){
-				za=za+100;
-				$("#line_an").delay(za).animate({width:'100%'},300,'easeInOutQuart');
-				$("#news_").delay(za+300).animate({opacity:1},300,'easeInOutQuart');
-			}
-				za=za+300;
+			za=za+300;
 		});
+		$("#line_an").delay(1200).animate({width:'100%'},600,'easeInOutQuart');
+		$("#news_").delay(1600).animate({opacity:1},300,'easeInOutQuart');
 
 		$(".link").on('click',function(){
 	        $("body").animate({scrollTop:0},300, 'linear');

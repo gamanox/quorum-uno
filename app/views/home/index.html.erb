@@ -28,27 +28,27 @@
 		<li class="section" id="event_section">
 			<div class="section_link">
 				<%= link_to image_tag('/assets/event.jpg', :border=>0, :class => 'img_section link', :id =>'event'), { :controller => 'home', :action => 'content', :id => 10 }, :remote => true  %>
-				<%= link_to "EVENTO", { :action=>'content', :controller => 'home', :id => 10}, :remote => true %>
+				<%= link_to "EVENTO", { :action=>'content', :controller => 'home', :id => 10}, :class=> 'link', :remote => true %>
 			</div>
 		</li>
 		<li class="section" id="manifest_section">
 			<div class="section_link">
-				<%= link_to image_tag('/assets/manifest.jpg', :border=>0, :class => 'img_section link', :id =>'manifest_Text'), { :controller => 'home', :action => 'content', :id => 3 }, :remote => true  %>
-				<%= link_to "MANIFIESTO", { :action=>'content', :controller => 'home', :id => 3 }, :remote => true %>
+				<%= link_to image_tag('/assets/manifest.jpg', :border=>0, :class => 'img_section link', :id =>'manifest_Text'), { :controller => 'home', :action => 'content', :id => 3 }, :class=> 'link', :remote => true  %>
+				<%= link_to "MANIFIESTO", { :action=>'content', :controller => 'home', :id => 3 }, :class=> 'link', :remote => true %>
 			</div>
 		</li>
 		<li class="section" id="why_section">
 			<div class="section_link">
 				<div class="img_section" id="why_image">
-					<%= link_to image_tag('/assets/why.png', :border=>0, :class => 'link', :id =>'why'), { :controller => 'home', :action => 'content', :id => 9 }, :remote => true  %>
+					<%= link_to image_tag('/assets/why.png', :border=>0, :class => 'link', :id =>'why'), { :controller => 'home', :action => 'content', :id => 9 }, :class=> 'link', :remote => true  %>
 				</div>
-				<%= link_to "PQ13 AÑO UNO", { :action=>'content', :controller => 'home', :id => 9 }, :remote => true %>
+				<%= link_to "PQ13 AÑO UNO", { :action=>'content', :controller => 'home', :id => 9 }, :class=> 'link', :remote => true %>
 			</div>
 		</li>
 		<li class="section" id="impact_section">
 			<div class="section_link">
-				<%= link_to image_tag('/assets/impact.jpg', :border=>0, :class => 'img_section link', :id =>'impact'), { :controller => 'home', :action => 'content', :id => 8 }, :remote => true  %>
-				<%= link_to "IMPACTO", { :action=>'content', :controller => 'home', :id => 8 }, :remote => true %>
+				<%= link_to image_tag('/assets/impact.jpg', :border=>0, :class => 'img_section link', :id =>'impact'), { :controller => 'home', :action => 'content', :id => 8 }, :class=> 'link', :remote => true  %>
+				<%= link_to "IMPACTO", { :action=>'content', :controller => 'home', :id => 8 }, :class=> 'link', :remote => true %>
 			</div>
 		</li>
 	</ul>
