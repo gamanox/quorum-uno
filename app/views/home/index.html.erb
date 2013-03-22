@@ -28,7 +28,7 @@
 		<li class="section" id="event_section">
 			<div class="section_link">
 				<%= link_to image_tag('/assets/event.jpg', :border=>0, :class => 'img_section link', :id =>'event'), { :controller => 'home', :action => 'content', :id => 10 }, :remote => true  %>
-				<%= link_to "EVENTO", { :action=>'content', :controller => 'home', :id => 10}, :class=> 'link', :remote => true %>
+				<%= link_to "EVENTOS", { :action=>'content', :controller => 'home', :id => 10}, :class=> 'link', :remote => true %>
 			</div>
 		</li>
 		<li class="section" id="manifest_section">
@@ -77,13 +77,13 @@
 			<div id="fb_quorum" class="asset"></div>
 			<a href="http://bpb.opendns.com/a/www.facebook.com/PremioQuorum" id="facebook_quorum">FACEBOOK</a>
 		</div>
-		<div id="newsletter">
+		<!--<div id="newsletter">
 			 <h1 id="subscribe">SUSCRÍBETE <br>Y RECIBE NOTICIAS</h1> 
 			<input value="correo electrónico" data="correo electrónico" type="text" id="email_newsletter">
 			<div id="send_newsletter">
 				<a href="" id="arrow_newsletter" class="asset"></a>
 			</div>
-		</div>
+		</div>-->
 	</div>
 </div>
 <div id="news" class="block_footer">
@@ -93,7 +93,9 @@
 			<%= link_to image_tag(noticia.picture, :border=>0, :class => 'img_agend'), { :controller => 'home', :action => 'content', :id => 1, :article => noticia.id}, :class=> 'link', :remote => true  %>
 				<div class="texts_agend">
 					<h1><%= noticia.title %></h1>
-					<p class="description_note"><%= noticia.desc.html_safe %></p>
+					<div class="description_note">
+						<%= noticia.desc. html_safe %>
+					</div>
 				</div>
 		</section>
 		<% end %>

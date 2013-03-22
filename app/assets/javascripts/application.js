@@ -75,6 +75,7 @@ $(function() {
             });
         });
     }
+    
     $.fn.animateloader = function () {
         var $this = $(this), za=0;
         return this.each(function () {

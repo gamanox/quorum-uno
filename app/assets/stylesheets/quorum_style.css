@@ -107,7 +107,7 @@ li{
     background: url(/assets/assets.png) no-repeat;
 }
 #categories li:nth-child(1){
-	margin-left: 210px;
+	margin-left: 205px;
 }
 .wrapper{
 	width: 1020px;
@@ -141,7 +141,7 @@ li{
 	width: 100%;
 }
 .category{
-	width: 150px;
+	width: 130px;
 	opacity: 0;
 	text-align: center;
 }
@@ -406,11 +406,14 @@ p{
 	font-size: 15px;
 	color: white;
 }
-.texts_agend p {
+.texts_agend p, .description_note, .description_note div {
 	margin-top: 17px;
 	line-height: 18px;
 	height: 92px;
 	overflow: hidden;
+	font-family: 'museo_100';
+	font-size: 14px;
+	color: white;
 }
 .head_h1_foter {
 	color: #8F8F8F;
