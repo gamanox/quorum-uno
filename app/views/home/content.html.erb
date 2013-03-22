@@ -15,7 +15,6 @@
 		<div class="subcategory_display">
 			<%= link_to image_tag(n.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 2, :article => n.id }, :class=> 'link', :remote => true  %>
 			<p class="category_body_nav"><%= n.desc.html_safe.slice(0..200) + "...  "%></p>
-			<%= link_to "+ LEER MÁS", { :action=>'content', :controller => 'home', :id => 2, :article => n.id }, :class => "readmore_feed link", :remote => true %>
 		</div>
 	<% end %>
 	<div id="line_an"></div>
@@ -25,7 +24,6 @@
 			<%= link_to image_tag(e.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 1, :article => e.id }, :class=> 'link', :remote => true  %>
 			<p class="category_body_nav"><%= e.desc.slice(0..200).html_safe + "... "%></p>
 			<a href="<%= e.url%>" target="_blank" class="link_feed"><%= e.url%></a><br>
-			<%= link_to "+ LEER MÁS", { :action=>'content', :controller => 'home', :id => 1, :article => e.id }, :class => "readmore_feed link", :remote => true %>
 		</div>
 	<% end %>
 </div>
@@ -45,17 +43,17 @@ $(document).ready(function() {
 			randColor = colors[(Math.floor(Math.random() * 5))],
 			za = 0;
 
-			var majior = (Math.max(maxH,1050,show))+100;
 			$(".contenido img").each(function(){
+				show = show + ($(this).height());
 				var imgW = $(this).width();
-				console.log(imgW)
 				if(imgW<598){
 					$(this).css({width:300});
 				}else{
 					$(this).css({width:600, marginTop:22, marginBottom:22});
 				}
-
 			});
+
+			var majior = (Math.max(maxH,1050,show))+100;
 
 			$("#show_").animate({height:majior,backgroundColor:'#1e1e1e',opacity:1},1200,'easeInOutQuart');
 			$("._showline").animate({opacity:1, height:(majior+60),backgroundColor:('#'+randColor)},1200,'easeInOutQuart');

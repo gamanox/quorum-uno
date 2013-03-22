@@ -16,8 +16,7 @@
 	<% @events.each do |n| %>
 		<div class="subcategory_display">
 			<%= link_to image_tag(n.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 2, :article => n.id }, :class=> 'link', :remote => true  %>
-			<p class="category_body_nav"><%= n.desc.slice(0..200).html_safe + "...  "%></p>
-			<%= link_to "+ LEER MÁS", { :action=>'content', :controller => 'home', :id => 2, :article => n.id }, :class => "readmore_feed link", :remote => true %>
+			<p class="category_body_nav"><%= n.desc.slice(0..200).html_safe + "...  " %></p>
 		</div>
 	<% end %>
 	<div id="line_an"></div>
@@ -27,7 +26,6 @@
 			<%= link_to image_tag(e.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 1, :article => e.id }, :class=> 'link', :remote => true  %>
 			<p class="category_body_nav"><%= e.desc.slice(0..200).html_safe + "... "%></p>
 			<a href="<%= e.url%>" target="_blank" class="link_feed"><%= e.url%></a><br>
-			<%= link_to "+ LEER MÁS", { :action=>'content', :controller => 'home', :id => 1, :article => e.id }, :class => "readmore_feed link", :remote => true %>
 		</div>
 	<% end %>
 </div>
