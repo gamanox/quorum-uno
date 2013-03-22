@@ -15,10 +15,11 @@ $('#main_container').fadeOut(300,function(){
 		var majior = (Math.max(maxH,1050,show))+100;
 		$(".contenido img").each(function(){
 			var imgW = $(this).width();
-			if(imgW<600){
-				$(this).css({width:300});
-			}else{
-				$(this).css({width:600, marginTop:22, marginBottom:22});
+			if(imgW<600){				
+					$(this).css({width:300});
+				}else{
+					show = show + ($(this).height());
+					$(this).css({width:600, marginTop:22, marginBottom:22});
 			}
 
 		});

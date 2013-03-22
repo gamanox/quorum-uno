@@ -2,11 +2,11 @@
 <% @content.each do |c| %>
 	<div class="contenido">
 		<h1 class="h1_content"><%= c.title %></h1>
+		<div class="line_contenido"></div>
 		<img src="<%= c.picture  %>" id="<%= c.id %>">
 		<p class="category_body_show"><%= h c.desc.html_safe %></p>
 		<a href="<%= c.url%>" target="_blank" class="link_feed"><%= c.url%></a>
 	</div>
-	<div class="line_contenido"></div>
 <% end %>
 </div>
 <div class="_showline"></div>
@@ -16,7 +16,7 @@
 	<% @events.each do |n| %>
 		<div class="subcategory_display">
 			<%= link_to image_tag(n.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 2, :article => n.id }, :class=> 'link', :remote => true  %>
-			<p class="category_body_nav"><%= n.desc.slice(0..200).html_safe + "...  " %></p>
+			<p class="category_body_nav"><%= n.desc.slice(0..200).html_safe %></p>
 		</div>
 	<% end %>
 	<div id="line_an"></div>
@@ -24,7 +24,7 @@
 	<% @news.each do |e| %>
 		<div class="subcategory_display">
 			<%= link_to image_tag(e.picture, :border=>0, :class => 'img_feed link'), { :controller => 'home', :action => 'content', :id => 1, :article => e.id }, :class=> 'link', :remote => true  %>
-			<p class="category_body_nav"><%= e.desc.slice(0..200).html_safe + "... "%></p>
+			<p class="category_body_nav"><%= e.desc.slice(0..200).html_safe %></p>
 			<a href="<%= e.url%>" target="_blank" class="link_feed"><%= e.url%></a><br>
 		</div>
 	<% end %>
