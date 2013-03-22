@@ -62,7 +62,7 @@
 	margin: 0;
 	line-height: 33px;
 }
-.category_body_show {
+.contenido, .category_body_show {
 	color: white;
 	font-family: 'museo_100';
 	font-size: 14px;
@@ -72,6 +72,7 @@
 	margin-bottom: 10px;
 	position: relative;
 }
+
 .category_body_nav, .subcategory_display, .subcategory_display div {
 	color: white;
 	font-family: 'museo_100';
@@ -118,13 +119,13 @@ line-height: 20px;
 	margin-top: -10px
 }
 .h1_content {
-	font-family: 'museo_300';
-	color: white;
-	font-size: 32px;
-	text-transform: uppercase;
-	font-weight: normal;
-	letter-spacing: 2px;
-	margin-bottom: 30px;
+font-family: 'museo_300';
+color: white;
+font-size: 32px;
+text-transform: uppercase;
+font-weight: normal;
+letter-spacing: 2px;
+line-height: 30px;
 }
 .contenido {
 	clear: both;
@@ -134,9 +135,11 @@ line-height: 20px;
 .line_contenido {
 width: 600px;
 height: 1px;
-background: rgba(255,255,255,0.34);
+background: rgba(255, 255, 255, 0.34);
 margin-top: 20px;
 float: left;
+bottom: 10px;
+position: relative;
 }
 .contenido h3 {
 	font-family: 'museo_100';
@@ -163,4 +166,10 @@ float: left;
 }
 .article_paragraph img{
 	display: none;
+}
+.category_body_show a {
+bottom: 10px;
+margin-top: 23px;
+top: 4px;
+line-height: 27px;
 }
