@@ -14,13 +14,6 @@
 //= require jquery_ujs
 //= require_tree .
 $(function() {
-    var str=(window.location.href), valid=str.match(/[/#/]/g);
-
-    if(valid!=null){
-        windowactive=str.split("#", 2);
-        var redirect = 'http://quorum-uno.herokuapp.com'+windowactive[1];
-        setTimeout(function(){ top.location = redirect; },100);
-    }
 
     $(window).resize(function () { sizes(); });
     function sizes() { $(".bgs").centers(); }
