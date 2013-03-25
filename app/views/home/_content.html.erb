@@ -3,7 +3,9 @@
 	<div class="contenido">
 		<h1 class="h1_content"><%= c.title %></h1>
 		<div class="line_contenido"></div>
-		<img src="<%= c.picture  %>" id="<%= c.id %>">
+		<% if c.picture? %>
+			<img src="<%= c.picture  %>" id="<%= c.id %>">
+		<% end %>
 		<p class="category_body_show"><%= h c.desc.html_safe %></p>
 		<a href="<%= c.url%>" target="_blank" class="link_feed"><%= c.url%></a>
 	</div>
