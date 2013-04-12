@@ -14,6 +14,29 @@
 //= require jquery_ujs
 //= require_tree .
 $(function() {
+	
+	
+	$.address.change(function (event) {
+		console.log(event.value);
+		switch(event.value)
+		{
+			// home/content?article=12&id=5
+			
+			case '/home/content?article=' + $.address.parameter('article') + '&id=' + $.address.parameter('id'):
+			console.log('entro');
+			$.ajax({
+				type:'GET',
+				url: event.path,
+				data: "article=" + $.address.parameter('article') + '&id=' + $.address.parameter('id')
+
+			});
+			
+			break;
+		}
+		
+	});
+	
+	
 
     $(window).resize(function () { sizes(); });
     function sizes() { $(".bgs").centers(); }
@@ -305,6 +328,11 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
         $(this).addClass("active");
         return $(this).attr('href');
     });
+	
+
+	
+	
+
 
     $(".link").on('click',function(){
         $("body").animate({scrollTop:0},300,'linear');

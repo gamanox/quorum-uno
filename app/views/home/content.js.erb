@@ -1,5 +1,41 @@
+
+
+// $.ajax({
+// 	 beforeSend: function(){
+// 	  	$('#preloader').show();
+//   },
+//   	success:function(){
+// 		$('#partner_clients').html("<%= escape_javascript(render('content')) %>").hide().fadeIn();
+//   	},
+//   	complete: function(){
+//   		$('#preloader').hide();
+// 
+// 	$(this).paneo('.elements li:eq(13)');
+// 
+// 
+//   	}
+// })
+
+
+
+
+
 $('#main_container').fadeOut(300,function(){
 	$(this).html("<%= escape_javascript(render('content')) %>").fadeIn(function(){
+		
+		$('a:not(.link)').on('click', function(e) {
+			e.preventDefault();
+			var hr = $(this).attr("href");
+			$(this).attr("data-remote","true").attr("target","").attr("address","true");
+			var urlFix = hr.split("#");
+			$(this).attr("href",urlFix[1]);
+		    $.address.value(urlFix[1]);
+		
+			console.log(urlFix[1]);
+
+		});
+		
+		
 		var show = ($("#show_").height())+60;
 		var maxH = $(window).height(),
 			colors = ['e3e41a','fb2467','459ad3','73c5c9','c7ced2','8FC185'],

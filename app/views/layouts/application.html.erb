@@ -5,16 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <SCRIPT language="JavaScript" type="text/javascript">
-  <!--
-  var showtag="@"
-  var showlink="Contacto";
-  var showname="info";
-  var showhost="quorum.org.mx";
-  document.write("<a href="+"mail"+"to:"+showname+showtag+showhost+
-  ">"+showlink+"<\/a>")
-  //-->
-  </SCRIPT>
+
 </head>
 <body>  
     <div id="preloader">
@@ -76,7 +67,17 @@
                                 <a href="http://awards.oxobox.tv/index.php?cc=quorum2013" target="_blank">Inscríbete</a>
                             </li>
                             <li class="category">
-                                <a href="mailto: info@quorum.org.mx">Contacto</a>
+							    <SCRIPT language="JavaScript" type="text/javascript">
+							    <!--
+							    var showtag="@"
+							    var showlink="Contacto";
+							    var showname="info";
+							    var showhost="quorum.org.mx";
+							    document.write("<a href="+"mail"+"to:"+showname+showtag+showhost+
+							    ">"+showlink+"<\/a>")
+							    //-->
+							    </SCRIPT>
+
                             </li>
                         </ul>
                     </nav>
