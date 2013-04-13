@@ -23,15 +23,13 @@
 $('#main_container').fadeOut(300,function(){
 	$(this).html("<%= escape_javascript(render('content')) %>").fadeIn(function(){
 		
-		$('a:not(.link)').on('click', function(e) {
+		$('a:not(.header)').on('click', function(e) {
 			e.preventDefault();
 			var hr = $(this).attr("href");
 			$(this).attr("data-remote","true").attr("target","").attr("address","true");
 			var urlFix = hr.split("#");
 			$(this).attr("href",urlFix[1]);
 		    $.address.value(urlFix[1]);
-		
-			console.log(urlFix[1]);
 
 		});
 		

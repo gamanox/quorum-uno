@@ -25,7 +25,6 @@ $(function() {
 			case '/home/content?article=' + $.address.parameter('article') + '&id=' + $.address.parameter('id'):
 			console.log('entro');
 			$.ajax({
-				type:'GET',
 				url: event.path,
 				data: "article=" + $.address.parameter('article') + '&id=' + $.address.parameter('id')
 

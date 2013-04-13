@@ -43,13 +43,13 @@
             <header>
                 <div class="wrapper">
                     <div id="logo_quorum_container">
-                        <%= link_to image_tag('/assets/logo_header.png', :border => 0, :id => 'logo_header'), { :controller => 'home', :action => 'index' } %>
+                        <%= link_to image_tag('/assets/logo_header.png', :border => 0, :id => 'logo_header'), { :controller => 'home', :action => 'index' }, :class => "header" %>
                         <div id="logo_text" class="asset"></div>
                     </div>
                     <nav>
                         <ul id="categories">
                             <li class="category">
-                                <a href="/" >Quórum</a>
+                                <a href="/" class="header" >Quórum</a>
                             </li>
                             <li class="category">
                                 <%= link_to "Categorías", { :action=>'content', :controller => 'home', :id => 11 }, :class =>"link", :remote => true %>
