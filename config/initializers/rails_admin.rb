@@ -10,7 +10,7 @@ RailsAdmin.config do |config|
       field :picture
       field :title
       field :desc do
-        bootstrap_wysihtml5 true
+        ckeditor true
       end
     end
   end

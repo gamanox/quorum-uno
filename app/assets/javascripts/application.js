@@ -14,11 +14,9 @@
 //= require jquery_ujs
 //= require_tree .
 $(function() {
-	
-	
-	$.address.change(function (event) {
-		console.log(event.value);
-		switch(event.value)
+
+$.address.change(function (event) {
+    switch(event.value)
 		{
 			// home/content?article=12&id=5
 			
@@ -27,15 +25,11 @@ $(function() {
 			$.ajax({
 				url: event.path,
 				data: "article=" + $.address.parameter('article') + '&id=' + $.address.parameter('id')
-
-			});
-			
+    });
 			break;
 		}
 		
 	});
-	
-	
 
     $(window).resize(function () { sizes(); });
     function sizes() { $(".bgs").centers(); }
@@ -58,6 +52,7 @@ $(function() {
             $('html, body').css({overflowY:'scroll'});
             charge_loaders();
             byeloader();
+        
         },1000);        
     });
 
@@ -125,6 +120,7 @@ $("#h1_preloader").center();
 $(".svgloader").animateloader();
 $("#h1_preloader").delay(1000).animate({color:'#fffff'},600,'easeInOutQuart');
 
+
 function byeloader(){
     $("#theloader").delay(2000).fadeOut(2300,'easeInOutElastic');
     $("#h1_preloader").animate({color:'#000000'},1200,'easeOutElastic');
@@ -165,7 +161,6 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
         if(ars!=5){ ars=ars+1; load_bgs(); }
         else{ setTimeout(function(){ loader_uno(); },2000); }
     }
-
     function plax_ready(){
         $.plax.enable();
         $('#blue').plaxify({"xRange":5,"yRange":5});
@@ -206,6 +201,7 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
         $("#logo_text").delay(1500).animate({height:80},600,'easeOutQuart');
         $(".category").delay(2000).category();
         $("#contents").delay(1500).animate({opacity:1,height:400},1200,'easeOutQuart');
+        $(".list_carousel").delay(1500).animate({opacity:1},1200,'easeOutQuart');
         $("#arrow_prev_content, #arrow_next_content").delay(2000).animate({opacity:1},300,'easeInOutQuart');
         $("#social_networks, .block_footer,#sections").delay(1600).animate({opacity:1},1200,'easeOutQuart');
     }
@@ -338,4 +334,17 @@ var backgrounds = ['blue','brown','green','orange','pink','yellow'],
         $("#connecting").animate({opacity:0,color:'#000000',top:280},600,'easeOutQuart');
         $("#contents").animate({opacity:0,backgroundColor:'#000000',top:50},600,'easeOutQuart');
     });
+
+$('#foo2').carouFredSel({
+    width: 890,
+    prev: '#prev2',
+    next: '#next2',
+   auto: true
+                }); 
+     
+
 });
+
+
+
+

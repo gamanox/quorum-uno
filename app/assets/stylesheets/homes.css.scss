@@ -173,3 +173,71 @@ margin-top: 23px;
 top: 4px;
 line-height: 27px;
 }
+
+
+// ESTILOS DE CARROUSEL
+.list_carousel ul#foo2{
+	
+}
+.list_carousel {
+   	background-color:black;
+	width: 1021px;
+	height:98px;
+	margin-top: -3px;
+	opacity: 0;
+}
+.list_carousel ul {
+    margin: 0 0 0 60px;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+.list_carousel li {
+    text-align: center;
+    height: 80px;
+   	padding: 0;
+    display: block;
+    float: left;
+	border-color: #999;
+	border-width: 5px;
+	margin-right: 6px;
+	margin-left: 6px;
+	margin-top: 14px;
+	width: 105px;
+	position: relative;
+	right: 0;
+}
+.list_carousel.responsive {
+width: auto;
+margin-left: 0;
+}
+.clearfix {
+float: none;
+clear: both;
+}
+.prev {
+background-image: url(/assets/prev.jpg);
+position: relative;
+right: 0px;
+bottom: 94px;
+cursor: pointer;
+height:98px;
+width:35px;
+display:block;
+}
+.next {
+background-image: url(/assets/next.jpg);
+height:98px;
+width:35px;
+display:block;
+margin-left: 0;
+position: relative;
+left: 985px;
+bottom: 192px;
+cursor: pointer;
+}
+
+
+
+
+

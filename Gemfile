@@ -28,7 +28,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'bootstrap-wysihtml5-rails'
+gem "ckeditor"
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
