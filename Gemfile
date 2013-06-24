@@ -9,7 +9,7 @@ gem 'rails', '3.2.12'
 #   gem 'sqlite3'
 # end
 # group :production do
-#   gem 'pg'
+  gem 'pg'
 # end
 
 # gem 'sqlite3'
