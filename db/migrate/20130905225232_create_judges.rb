@@ -22,6 +22,8 @@ class CreateJudges < ActiveRecord::Migration
     	t.string :picture1_content_type
     	t.integer :picture1_file_size
     	t.datetime :picture1_updated_at
+        t.string :password
+        t.string :uname
     	t.timestamps
     end
   end
