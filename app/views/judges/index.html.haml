@@ -1,0 +1,86 @@
+= javascript :defaults, "endless_page"
+#hideoutwrapper
+
+.bodywrapper
+	= render :partial => "judges/detail"
+
+:javascript
+
+	$("#hideoutwrapper").css("display","none");
+	var currentPage=#{@page};
+	var limit=#{@limit};
+	var az=#{@az};
+	if(az==true)
+	{
+		az=1;
+	}
+	if(az==false)
+	{
+		az=0;
+	}
+	var classe=#{@classe};
+	var award=#{@award};
+	function checkScroll() {
+	  if (nearBottomOfPage()) {
+	  	currentPage++;
+	    if(currentPage<limit+3)
+	    {
+		    $("#hideoutwrapper").load('/judges/detail.js?page=' + currentPage);
+		    if(az>-1)
+		    {
+		    	$("#hideoutwrapper").load('/judges/detail.js?page=' + currentPage+'&AZ='+az);
+		    }
+		    if(classe>0)
+		    {
+		    	$("#hideoutwrapper").load('/judges/detail.js?page=' + currentPage+'&class='+classe);
+		    }
+		    if(award>0)
+		    {
+		    	$("#hideoutwrapper").load('/judges/detail.js?page=' + currentPage+'&award='+award);
+		    }
+		    $(".bodywrapper").append($("#hideoutwrapper").html());
+		    setTimeout("checkScroll()", 2000);
+		}
+	  }
+	  else
+	  {
+	  	if(currentPage<limit+1)
+		{
+	    	setTimeout("checkScroll()", 2000);
+	    }
+	  }
+	}
+
+	function nearBottomOfPage() {
+	  return scrollDistanceFromBottom() < 150;
+	}
+
+	function scrollDistanceFromBottom(argument) {
+	  return pageHeight() - (window.pageYOffset + self.innerHeight);
+	}
+
+	function pageHeight() {
+	  return Math.max(document.body.scrollHeight, document.body.offsetHeight);
+	}
+
+	//document.observe('dom:loaded', checkScroll);
+
+
+	window.onload=function(){checkScroll();};
+	$("#az").on('click',function(e){
+		e.preventDefault();
+		alert(az);
+		if(az==1)
+		{
+			az=0;
+		}
+		else
+		{
+			az=1;
+		}
+		currentPage=1;
+		classe=0;
+		award=0;
+		$(".bodywrapper").load('/judges/detail.js?page=' + currentPage +'&AZ='+az);
+		setTimeout("checkScroll()", 2000);
+	});

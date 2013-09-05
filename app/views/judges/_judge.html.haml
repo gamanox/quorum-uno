@@ -1,0 +1,59 @@
+-@judges.map do |jurado|
+	%article.jurado
+		.contLeft
+			%img.imgperfil{:src => "#{jurado.profilepic(:displaysite1)}", :alt => "#{jurado[:name]}"}/
+			%p.categoria{:class => "cat#{jurado.classification[:id]}"}
+				= jurado.classification[:name]
+			%p.nombre
+				= jurado.name
+			%p.agencia
+				= jurado.work
+			%p.lugar
+				= jurado.location
+
+			.contSocial
+				-if jurado.sn1_web != ""
+					%a.web.sociallink{:href => "http://#{jurado.sn1_web}", :target => "_blank"}
+				-if jurado.sn2_mail != ""
+					%a.correo.sociallink{:href => "http://#{jurado.sn2_mail}", :target => "_blank"}
+				-if jurado.sn3_twitter != ""
+					%a.twitter.sociallink{:href => "http://#{jurado.sn3_twitter}", :target => "_blank"}
+				-if jurado.sn4_facebook != ""
+					%a.facebook.sociallink{:href => "http://#{jurado.sn4_facebook}", :target => "_blank"}
+				-if jurado.sn5_linkedin != ""
+					%a.linkedin.sociallink{:href => "http://#{jurado.sn5_linkedin}", :target => "_blank"}
+			-if jurado.link1 != ""
+				%a.url{:href => "http://#{jurado.link1}", :target => "_blank"}
+					%p
+						= jurado.link1
+			-if jurado.link2 != ""
+				%a.url{:href => "http://#{jurado.link2}", :target => "_blank"}
+					%p
+						= jurado.link2
+			-if jurado.link3 != ""
+				%a.url{:href => "http://#{jurado.link3}", :target => "_blank"}
+					%p
+						= jurado.link3
+
+		.contRight
+			%img.imgtrabajo{:src => "#{jurado.picture1(:displaysite1)}", :alt => ""}/
+			.contBio
+
+				.scrollBio
+					.scrollbar
+						.track
+							.thumb{:class => "colorScroll#{jurado.classification[:id]}"}
+								/ .end
+					.viewport
+						.overview
+							%p.nombre
+								= jurado.name
+							%p.bio
+								= jurado.bio
+
+		.contBottom
+			%p.juradoen
+				Jurado en:
+				-jurado.awards.map do |award|
+					= award.year
+

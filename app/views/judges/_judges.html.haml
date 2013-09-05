@@ -1,0 +1,59 @@
+= javascript :defaults, "endless_page"
+#hideoutwrapper
+
+.bodywrapper
+	= render :partial => "judges/judge"
+	
+:javascript
+	$("#hideoutwrapper").css("display","none");
+	var currentPage=#{@page};
+	var limit=#{@limit};
+	var az=#{@az};
+	var classe=#{@classe};
+	var award=#{@award};
+	function checkScroll() {
+	  if (nearBottomOfPage()) {
+	  	currentPage++;
+	    if(currentPage<limit+1)
+	    {
+		    $("#hideoutwrapper").load('/judges/detail.js?page=' + currentPage);
+		    if(az!=-1)
+		    {
+		    	$("#hideoutwrapper").load('/judges/detail.js?page=' + currentPage);
+		    }
+		    if(classe>0)
+		    {
+		    	$("#hideoutwrapper").load('/judges/detail.js?page=' + currentPage);
+		    }
+		    if(award>0)
+		    {
+		    	$("#hideoutwrapper").load('/judges/detail.js?page=' + currentPage);
+		    }
+		    $(".bodywrapper").append($("#hideoutwrapper").html());
+		    setTimeout("checkScroll()", 2000);
+		}
+	  } 
+	  else 
+	  {
+	  	if(currentPage<limit+1)
+		{
+	    	setTimeout("checkScroll()", 2000);
+	    }
+	  }
+	}
+
+	function nearBottomOfPage() {
+	  return scrollDistanceFromBottom() < 150;
+	}
+
+	function scrollDistanceFromBottom(argument) {
+	  return pageHeight() - (window.pageYOffset + self.innerHeight);
+	}
+
+	function pageHeight() {
+	  return Math.max(document.body.scrollHeight, document.body.offsetHeight);
+	}
+
+	//document.observe('dom:loaded', checkScroll);
+
+	window.onload=function(){checkScroll();};

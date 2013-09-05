@@ -48,3 +48,8 @@ gem 'jquery-rails'
 
 
 gem "devise"
+gem 'will_paginate'
+
+gem 'aws-s3', :require => "aws/s3"
+gem 'aws-sdk'
+gem "paperclip", "~> 3.0"

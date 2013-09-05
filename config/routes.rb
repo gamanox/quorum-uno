@@ -1,4 +1,8 @@
 Quorum::Application.routes.draw do
+  get "judges/index"
+
+  get "judges/detail"
+
   devise_for :users
 
   mount RailsAdmin::Engine => '/backoffice', :as => 'rails_admin'
@@ -56,6 +60,7 @@ Quorum::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+  match "/judges"=>"judges#index",:via=>:get
   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"

@@ -1,0 +1,45 @@
+!!!
+%html
+	%meta{ :name=>"viewport", :content=>"width=device-width, initial-scale=1, maximum-scale=1"}/
+
+	= javascript_include_tag "judges"
+
+	= javascript_include_tag "mediaqueryload-min"
+	/[if lt IE 9]<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	= csrf_meta_tags
+	%body
+		%header
+			%nav
+				%ul
+					%li
+						%a.navlink#logo
+
+
+					%li
+						.navlink#orden
+							Ordenar
+					%li
+						%a.navlink#az{:href => "/judges?AZ=1"}
+
+							A -Z
+					%li
+						.navlink#categoria
+							Categoría
+							.classCont.subMen
+								-@categorias.map do |categoria|
+									%a.classification{:href => "/judges?class=#{categoria.id}", :id=>"class#{categoria.id}"}
+										%p.titleCat
+											= categoria.name
+					%li
+						.navlink#premio
+							Premio
+							.awardCont.subMen
+								-@premios.map do |award|
+									%a.premio{:href => "/judges?award=#{award.id}", :id=>"award#{award.id}"}
+										%p.titPremio
+											= award.year
+					/ %li
+					/ 	%a.navlink#paginado{:href => ""}
+					/ 		< 1 2 3 ... 7 >
+		%section.contenido
+			= yield

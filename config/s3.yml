@@ -1,0 +1,12 @@
+development:
+  bucket: JeepPS
+  access_key_id: AKIAIDORU3JKCISIU2PA
+  secret_access_key: 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
+test:
+  bucket: JeepPS
+  access_key_id: AKIAIDORU3JKCISIU2PA
+  secret_access_key: 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
+production:
+  bucket: JeepPS
+  access_key_id: AKIAIDORU3JKCISIU2PA
+  secret_access_key: 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
