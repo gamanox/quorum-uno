@@ -38,8 +38,8 @@
 									%a.premio{:href => "/judges?award=#{award.id}", :id=>"award#{award.id}"}
 										%p.titPremio
 											= award.year
-					/ %li
-					/ 	%a.navlink#paginado{:href => ""}
-					/ 		< 1 2 3 ... 7 >
+					%li
+						%a.navlink#admin{:href => "/backoffice"}
+							backoffice
 		%section.contenido
 			= yield
