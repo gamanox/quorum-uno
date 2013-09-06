@@ -1,4 +1,12 @@
 Quorum::Application.routes.draw do
+  get "sessions/login"
+
+  get "sessions/home"
+
+  get "sessions/profile"
+
+  get "sessions/setting"
+
   get "judges/index"
 
   get "judges/detail"
@@ -61,6 +69,7 @@ Quorum::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   match "/judges"=>"judges#index",:via=>:get
+  match "/sessions"=>"sessions#login",:via=>:get
   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
