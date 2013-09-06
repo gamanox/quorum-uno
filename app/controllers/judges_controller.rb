@@ -1,5 +1,6 @@
 # encoding: UTF-8
 class JudgesController < ApplicationController
+  before_filter :authenticate_user
   def index
     @page=1
     if(!params[:page].blank?)
