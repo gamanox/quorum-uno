@@ -1,0 +1,37 @@
+@mixin texto($font, $size, $color)
+	font-family: $font
+	font-size: $size
+	color: $color
+	margin: 0
+
+@mixin transition($prop)
+	-moz-transition: $prop 0.4s 
+	-webkit-transition: $prop 0.4s 
+	-o-transition: $prop 0.4s 
+	transition: $prop 0.4s
+	-webkit-backface-visibility: hidden
+
+@mixin transitionT($prop, $time)
+	-moz-transition: $prop $time 
+	-webkit-transition: $prop $time 
+	-o-transition: $prop $time 
+	transition: $prop $time
+	-webkit-backface-visibility: hidden
+
+@mixin noselect
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+@mixin scale($x, $y)
+	transform: scale($x,$y)
+	-ms-transform: scale($x,$y) /* IE 9 */
+	-webkit-transform: scale($x,$y)/* Safari and Chrome */
+
+@mixin img($url, $w, $h)
+	background:  url($url) 0 0 no-repeat
+	width: $w
+	height: $h
