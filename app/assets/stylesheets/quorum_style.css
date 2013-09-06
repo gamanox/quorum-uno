@@ -109,7 +109,7 @@ li{
     background: url(/assets/assets.png) no-repeat;
 }
 #categories li:nth-child(1){
-	margin-left: 205px;
+	margin-left: 30px;
 }
 .wrapper{
 	width: 1020px;
@@ -120,7 +120,7 @@ li{
 #logo_quorum_container{
 	width: 180px;
 	margin-top: 30px;
-	
+
 }
 #logo_text {
 	float: right;
@@ -143,7 +143,7 @@ li{
 	width: 100%;
 }
 .category{
-	margin-right: 55px;
+	margin-right: 24px;
 	opacity: 0;
 
 }
@@ -362,7 +362,7 @@ p{
 	color: white;
 }
 #why_image{
-	background: #640e35;	
+	background: #640e35;
 }
 #why {
 	position: relative;
@@ -636,7 +636,7 @@ label{
 	color:#A0A0A0;
 	float: left;
 	display: block;
-	
+
 }
 .strong_l{
 	font-family: 'museo_500';

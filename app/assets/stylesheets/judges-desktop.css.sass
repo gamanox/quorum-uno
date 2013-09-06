@@ -1,0 +1,251 @@
+@import "judges-default"
+
+$mq-desktop		: 86.375em !default
+
+header
+	margin-top: 20px
+	height: 130px
+	margin-bottom: 40px
+
+	nav
+		width: 710px
+		margin-left: auto
+		margin-right: auto
+		height: 130px
+
+
+		ul
+			width: 650px
+			padding-left: 30px
+			padding-right: 30px
+			// height: 130px
+			margin-left: auto
+			margin-right: auto
+			height: 130px
+			li
+				float: left
+		.navlink
+			position: relative
+			display: block
+			@include texto($museo300, 16px, $blanco)
+			width: 110px
+			text-align: center
+			padding-top: 87px
+			padding-bottom: 25px
+			@include transition(color)
+			&.active, &:hover
+				color: $grafico
+				@include transition(color)
+				@include transition(opacity)
+				.subMen
+					@include transition(opacity)
+					opacity: 1
+					visibility: visible
+					a
+						display: block
+						float: left
+						p
+							@include transition(color)
+
+						&:hover
+
+							p
+								@include transition(color)
+								color: $grafico
+
+							&#class1
+								p
+									color: $grafico
+							&#class2
+								p
+									color: $industrial
+							&#class3
+								p
+									color: $digital
+							&#class4
+								p
+									color: $animacion
+							&#class5
+								p
+									color: $ilustracion
+							&#class6
+								p
+									color: $moda
+
+
+
+			.subMen
+				@include transition(opacity)
+
+				visibility: hidden
+				opacity: 0
+				position: absolute
+				top: 130px
+				overflow: auto
+				background: $gris04
+				width: 110px
+				a
+					width: 90px
+					border-top: 1px solid  $gris02
+					margin-left: 10px
+					margin-right: 10px
+					color: $blanco
+					&:first-child
+						border-top: none
+
+
+					p
+						text-align: left
+						text-indent: 15px
+						@include texto($museo300, 12px, $blanco)
+						width: 100%
+						padding-bottom: 8px
+						padding-top: 8px
+
+
+		#logo.navlink
+			padding-top: 0
+			@include img("/assets/judges/logo_header.png", 100px, 130px)
+			background-position: center center
+
+
+
+
+
+.contenido
+	width: 650px
+	background: $gris04
+	margin-left: auto
+	margin-right: auto
+	// padding-top: 10px
+	padding-left: 30px
+	padding-right: 30px
+
+	.jurado
+		width: 650px
+		padding-top: 10px
+		padding-bottom: 20px
+		margin-bottom: 50px
+		border-bottom: 1px solid $gris01
+
+
+		.contLeft
+			float: left
+			display: block
+			margin-right: 10px
+			.imgperfil
+				width: 210px
+				height: 210px
+				display: block
+
+			p
+				padding-bottom: 6px
+			p.categoria
+				padding-top: 20px
+				text-transform: uppercase
+				@include texto($museo500, 20px, $blanco)
+				// line-height: 16px
+				&.cat1
+					color: $grafico
+				&.cat2
+					color: $industrial
+				&.cat3
+					color: $digital
+				&.cat4
+					color: $animacion
+				&.cat5
+					color: $ilustracion
+				&.cat6
+					color: $moda
+
+			p.nombre
+				@include texto($museo300, 18px, $blanco)
+				text-transform: uppercase
+			p.agencia
+				@include texto($museo300, 12px, $blanco)
+				// text-transform: uppercase
+			p.lugar
+				@include texto($museo300, 12px, $blanco)
+				// text-transform: uppercase
+			.contSocial
+				overflow: auto
+				height: 30px
+				border-bottom:  1px solid $gris02
+
+				.sociallink
+					float: left
+					display: block
+					width: 30px
+					height: 30px
+					background-position: top
+					&.web
+						background-image: url("/assets/btn_site.jpg")
+					&.correo
+						background-image: url("/assets/btn_correo.jpg")
+					&.twitter
+						background-image: url("/assets/btn_twitter.jpg")
+					&.facebook
+						background-image: url("/assets/btn_fb.jpg")
+					&.linkedin
+						background-image: url("/assets/btn_linkedin.jpg")
+					&:hover
+						background-position: bottom
+
+			a.url
+				padding-top: 10px
+				color: $blanco
+				// float: left
+				display: block
+				@include transition(color)
+				@include texto($museo300, 12px, $blanco)
+				&:hover
+					@include transition(color)
+					color: $grafico
+				p
+
+		.contRight
+			// width: 430px
+			float: right
+
+			.imgtrabajo
+				height: 210px
+				width: 430px
+				display: block
+				margin-bottom: 20px
+
+			.contBio
+				position: relative
+				background-color: $gris03
+				padding: 30px
+				width: 370px
+				height: 160px
+				overflow: hidden
+				p.nombre
+					@include texto($museo300, 12px, $blanco)
+					text-transform: uppercase
+				p.bio
+					@include texto($museo300, 12px, $blanco)
+					margin-top: 20px
+					// height: 130px
+					// text-overflow: ellipsis
+					// overflow: hidden
+
+
+		.contBottom
+			clear: both
+			padding-top: 30px
+			// margin-bottom: 20px
+
+			p.juradoen
+				@include texto($museo300, 12px, $blanco)
+
+
+
+
+
+
+
+
+
+
+
