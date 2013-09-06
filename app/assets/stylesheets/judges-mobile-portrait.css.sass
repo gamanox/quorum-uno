@@ -1,151 +1,251 @@
 @import "judges-default"
 
-
-
-
-// $mq-mobile-portrait	  : 320px !default
-// $mq-mobile-landscape	  : 480px !default
-// $mq-tablet-portrait   : 640px !default  -- changed because i want my blog content is around this wide, not 768. you should let content & design determine your breakpoints
-// $mq-tablet-landscape	: 1024px !default
-// $mq-desktop		: 1382px !default
-
-$mq-mobile-portrait	: 20em !default
-$mq-mobile-landscape	: 30em !default
-$mq-tablet-portrait	: 40em !default
-$mq-tablet-landscape	: 64em !default
 $mq-desktop		: 86.375em !default
 
-// Both portrait and landscape
-@mixin mobile-only 
-	@media (max-width : $mq-mobile-landscape) 
-		@content
-	
+header
+	margin-top: 20px
+	height: 130px
+	margin-bottom: 40px
+
+	nav
+		width: 710px
+		margin-left: auto
+		margin-right: auto
+		height: 130px
 
 
-// Everything up to and including the portrait width of the phone
-// Since it's the smallest query it doesn't need a min
-@mixin mobile-portrait-only 
-	@media (max-width : $mq-mobile-portrait) 
-		@content
-	
+		ul
+			width: 650px
+			padding-left: 30px
+			padding-right: 30px
+			// height: 130px
+			margin-left: auto
+			margin-right: auto
+			height: 130px
+			li
+				float: left
+		.navlink
+			position: relative
+			display: block
+			@include texto($museo300, 16px, $blanco)
+			width: 110px
+			text-align: center
+			padding-top: 87px
+			padding-bottom: 25px
+			@include transition(color)
+			&.active, &:hover
+				color: $grafico
+				@include transition(color)
+				@include transition(opacity)
+				.subMen
+					@include transition(opacity)
+					opacity: 1
+					visibility: visible
+					a
+						display: block
+						float: left
+						p
+							@include transition(color)
+
+						&:hover
+
+							p
+								@include transition(color)
+								color: $grafico
+
+							&#class1
+								p
+									color: $grafico
+							&#class2
+								p
+									color: $industrial
+							&#class3
+								p
+									color: $digital
+							&#class4
+								p
+									color: $animacion
+							&#class5
+								p
+									color: $ilustracion
+							&#class6
+								p
+									color: $moda
 
 
-// Everything up to and including the mobile portrait
-@mixin mobile-portrait-and-below 
-	@media (max-width : $mq-mobile-portrait) 
-		@content
-	
+
+			.subMen
+				@include transition(opacity)
+
+				visibility: hidden
+				opacity: 0
+				position: absolute
+				top: 130px
+				overflow: auto
+				background: $gris04
+				width: 110px
+				a
+					width: 90px
+					border-top: 1px solid  $gris02
+					margin-left: 10px
+					margin-right: 10px
+					color: $blanco
+					&:first-child
+						border-top: none
 
 
-// Everything above and including the mobile portrait
-@mixin mobile-portrait-and-up 
-	@media (min-width : $mq-mobile-portrait) 
-		@content
-	
+					p
+						text-align: left
+						text-indent: 15px
+						@include texto($museo300, 12px, $blanco)
+						width: 100%
+						padding-bottom: 8px
+						padding-top: 8px
 
 
-// Everthing larger than a portrait mobile up until mobile landscape
-@mixin mobile-landscape-only 
-	@media only screen and (min-width : $mq-mobile-portrait + .001) and (max-width : $mq-mobile-landscape) 
-		@content
-	
+		#logo.navlink
+			padding-top: 0
+			@include img("/assets/judges/logo_header.png", 100px, 130px)
+			background-position: center center
 
 
-// Everything up to and including the mobile landscape width
-@mixin mobile-landscape-and-below 
-	@media only screen and (max-width : $mq-mobile-landscape) 
-		@content
-	
 
 
-// Everything above and including the mobile landscape width
-@mixin mobile-landscape-and-up 
-	@media only screen and (min-width : $mq-mobile-portrait + .001) 
-		@content
-	
+
+.contenido
+	width: 650px
+	background: $gris04
+	margin-left: auto
+	margin-right: auto
+	// padding-top: 10px
+	padding-left: 30px
+	padding-right: 30px
+
+	.jurado
+		width: 650px
+		padding-top: 10px
+		padding-bottom: 20px
+		margin-bottom: 50px
+		border-bottom: 1px solid $gris01
 
 
-// Both the portrait and landscape width of the tablet
-// Larger than a landscape mobile but less than or equal to a landscape tablet
-@mixin tablet-only 
-	@media only screen and (min-width : $mq-mobile-landscape + .001) and (max-width : $mq-tablet-landscape) 
-		@content
-	
+		.contLeft
+			float: left
+			display: block
+			margin-right: 10px
+			.imgperfil
+				width: 210px
+				height: 210px
+				display: block
+
+			p
+				padding-bottom: 6px
+			p.categoria
+				padding-top: 20px
+				text-transform: uppercase
+				@include texto($museo500, 20px, $blanco)
+				// line-height: 16px
+				&.cat1
+					color: $grafico
+				&.cat2
+					color: $industrial
+				&.cat3
+					color: $digital
+				&.cat4
+					color: $animacion
+				&.cat5
+					color: $ilustracion
+				&.cat6
+					color: $moda
+
+			p.nombre
+				@include texto($museo300, 18px, $blanco)
+				text-transform: uppercase
+			p.agencia
+				@include texto($museo300, 12px, $blanco)
+				// text-transform: uppercase
+			p.lugar
+				@include texto($museo300, 12px, $blanco)
+				// text-transform: uppercase
+			.contSocial
+				overflow: auto
+				height: 30px
+				border-bottom:  1px solid $gris02
+
+				.sociallink
+					float: left
+					display: block
+					width: 30px
+					height: 30px
+					background-position: top
+					&.web
+						background-image: url("/assets/btn_site.jpg")
+					&.correo
+						background-image: url("/assets/btn_correo.jpg")
+					&.twitter
+						background-image: url("/assets/btn_twitter.jpg")
+					&.facebook
+						background-image: url("/assets/btn_fb.jpg")
+					&.linkedin
+						background-image: url("/assets/btn_linkedin.jpg")
+					&:hover
+						background-position: bottom
+
+			a.url
+				padding-top: 10px
+				color: $blanco
+				// float: left
+				display: block
+				@include transition(color)
+				@include texto($museo300, 12px, $blanco)
+				&:hover
+					@include transition(color)
+					color: $grafico
+				p
+
+		.contRight
+			// width: 430px
+			float: right
+
+			.imgtrabajo
+				height: 210px
+				width: 430px
+				display: block
+				margin-bottom: 20px
+
+			.contBio
+				position: relative
+				background-color: $gris03
+				padding: 30px
+				width: 370px
+				height: 160px
+				overflow: hidden
+				p.nombre
+					@include texto($museo300, 12px, $blanco)
+					text-transform: uppercase
+				p.bio
+					@include texto($museo300, 12px, $blanco)
+					margin-top: 20px
+					// height: 130px
+					// text-overflow: ellipsis
+					// overflow: hidden
 
 
-// Everything larger than mobile landscape up until the portrait width of the tablet
-@mixin tablet-portrait-only 
-	@media only screen and (min-width : $mq-mobile-landscape + .001) and (max-width : $mq-tablet-portrait) 
-		@content
-	
+		.contBottom
+			clear: both
+			padding-top: 30px
+			// margin-bottom: 20px
+
+			p.juradoen
+				@include texto($museo300, 12px, $blanco)
 
 
-// Everything below and including the portrait width of the tablet
-@mixin tablet-portrait-and-below 
-	@media only screen and (max-width : $mq-tablet-portrait) 
-		@content
-	
 
 
-// Everything above and including the portrait width of the tablet
-@mixin tablet-portrait-and-up 
-	// @media only screen and (min-width : $mq-mobile-landscape + 1) 
-	@media only screen and (min-width : $mq-tablet-portrait + .001) 
-		@content
-	
 
 
-// Larger than portrait but less than or equal to the landscape width
-@mixin tablet-landscape-only 
-	@media only screen and (min-width : $mq-tablet-portrait + .001) and (max-width : $mq-tablet-landscape) 
-		@content
-	
 
 
-// Up to and including the tablet landscape
-@mixin tablet-landscape-and-below 
-	@media only screen and (max-width : $mq-tablet-landscape) 
-		@content
-	
 
 
-// Everything larger than portrait tablet
-@mixin tablet-landscape-and-up 
-	@media only screen and (min-width : $mq-tablet-portrait + .001) 
-		@content
-	
 
-
-// Everything larger than a landscape tablet
-@mixin desktop-and-up 
-	@media only screen and (min-width : $mq-tablet-landscape + .001) 
-		@content
-	
-
-
-// Everything below and including the desktop 
-@mixin desktop-and-below 
-	@media only screen and (max-width : $mq-desktop) 
-		@content
-	
-
-
-// Everything larger than a landscape tablet but less than or equal to the desktop
-@mixin desktop-only 
-	@media only screen and (min-width : $mq-tablet-landscape + .001) and (max-width : $mq-desktop) 
-		@content
-	
-
-
-@mixin retina 
-	@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) 
-		@content
-	
-
-
-@mixin image-2x($image, $width: auto, $height: $width) 
-	@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) 
-		background-image: url($image)
-		@if $width != auto 
-		background-size: $width $height
-  
