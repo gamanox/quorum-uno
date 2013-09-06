@@ -109,7 +109,7 @@ li{
     background: url(/assets/assets.png) no-repeat;
 }
 #categories li:nth-child(1){
-	margin-left: 205px;
+	margin-left: 30px;
 }
 .wrapper{
 	width: 1020px;
