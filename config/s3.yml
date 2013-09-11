@@ -1,12 +1,12 @@
 development:
-  bucket: JeepPS
-  access_key_id: AKIAIDORU3JKCISIU2PA
-  secret_access_key: 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
+  bucket: quorum-1
+  access_key_id: AKIAI32U63YGQU33AZ6A
+  secret_access_key: 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
 test:
-  bucket: JeepPS
-  access_key_id: AKIAIDORU3JKCISIU2PA
-  secret_access_key: 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
+  bucket: quorum-1
+  access_key_id: AKIAI32U63YGQU33AZ6A
+  secret_access_key: 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
 production:
-  bucket: JeepPS
-  access_key_id: AKIAIDORU3JKCISIU2PA
-  secret_access_key: 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
+  bucket: quorum-1
+  access_key_id: AKIAI32U63YGQU33AZ6A
+  secret_access_key: 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
